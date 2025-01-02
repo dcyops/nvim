@@ -46,6 +46,7 @@ vim.opt.ttyfast = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
 vim.opt.splitright = true
+vim.opt.scrolloff = 999
 
 -- Disable netrw (for nvim-tree)
 vim.g.loaded_netrw = 1
