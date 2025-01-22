@@ -77,4 +77,10 @@ return {
       vim.api.nvim_set_keymap('t', '<Esc>', [[<C-\><C-n>]], {noremap = true, silent = true})
     end,
   },
+{
+  'vyfor/cord.nvim',
+  build = './build || .\\build',
+  event = 'VeryLazy',
+  opts = {}, -- calls require('cord').setup()
+}
 }
