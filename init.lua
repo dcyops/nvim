@@ -56,7 +56,15 @@ vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
 
 -- Keybindings
+
+-- Reload '~/.config/nvim/init.lua'
+vim.api.nvim_set_keymap("n", "<leader>r",
+  ":luafile ~/.config/nvim/init.lua<CR>", { noremap = true, silent = true })
+
+-- NvimTree
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
+
+-- Navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", { silent = true })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true })
 vim.keymap.set("n", "<C-e>", "$", { silent = true })
@@ -71,7 +79,11 @@ vim.keymap.set("n", "<leader>s", ":w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>,", "<Cmd>BufferPrevious<CR>", { silent = true })
 vim.keymap.set("n", "<leader>.", "<Cmd>BufferNext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>x", "<Cmd>BufferClose<CR>", { silent = true })
-
+-- Prevent VIM from adding the deleted value from adding to the clipboard.
 vim.keymap.set("n", "d", '"_d', { noremap = true, silent = true })
 vim.keymap.set("x", "d", '"_d', { noremap = true, silent = true })
 vim.keymap.set("x", "p", '"_dP', { noremap = true, silent = true })
+
+
+-- Useful functions
+
